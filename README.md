@@ -8,7 +8,7 @@
 
 ## 🔗 Links
 
-📂 [GitHub Repository](https://github.com/Udman06/Reelax-Assignment) &nbsp;|&nbsp; 👉 [Live Demo](#) <!-- Replace with Vercel URL after deploying -->
+📂 [GitHub Repository](https://github.com/Udman06/Reelax-Assignment) &nbsp;|&nbsp; 👉 [Live Demo](https://reelax-assignment-snowy.vercel.app/check-out)
 
 ---
 
@@ -17,6 +17,7 @@
 This project is a checkout/billing page UI for Reelax — an influencer marketing platform. The page allows users to review their billing details, apply wallet balance or coupon codes, and view a real-time order summary before confirming their plan purchase.
 
 **Key highlights:**
+
 - Billing form with fields for company info, GST, PAN, and address details
 - Order summary panel showing selected plan, pricing, tax (18% GST), and total
 - Coupon code section with selectable discount options (e.g. WELCOME20, ANNUAL50)
@@ -27,12 +28,12 @@ This project is a checkout/billing page UI for Reelax — an influencer marketin
 
 ## ⚙️ Tech Stack
 
-| Category     | Technology         |
-|--------------|--------------------|
-| Framework    | Next.js 14 (App Router) |
-| Language     | JavaScript (JSX)   |
-| Styling      | CSS Modules / Tailwind CSS |
-| Deployment   | Vercel             |
+| Category   | Technology                 |
+| ---------- | -------------------------- |
+| Framework  | Next.js 14 (App Router)    |
+| Language   | JavaScript (JSX)           |
+| Styling    | CSS Modules / Tailwind CSS |
+| Deployment | Vercel                     |
 
 ---
 
