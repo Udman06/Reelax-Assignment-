@@ -33,15 +33,17 @@ const ChevronIcon = ({ open }) => (
 const CouponOption = ({ code, description, selected, onSelect }) => (
   <button
     onClick={onSelect}
-    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-left transition-colors ${
+    className={`w-full flex items-center justify-between px-4 py-3 rounded-[4px] border border-[#E5E7EB] text-left transition-colors ${
       selected
         ? "border-blue-500 bg-white"
         : "border-gray-200 bg-white hover:border-gray-300"
     }`}
   >
     <div>
-      <span className="text-sm font-bold text-gray-900">{code}</span>
-      <span className="text-xs text-gray-500 ml-2">{description}</span>
+      <span className="text-[14px] font-bold text-[#111827]">{code}</span>
+      <span className="text-[10px] font-normal text-[#6B7280] ml-[10px]">
+        {description}
+      </span>
     </div>
     {/* Radio indicator */}
     <div
@@ -69,13 +71,13 @@ const CouponSection = ({ onCouponApply }) => {
   };
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="border border-[#E5E7EB] rounded-[4px] overflow-hidden">
       {/* Header toggle */}
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="w-full flex items-center justify-between px-4 py-3.5 bg-white"
+        className="w-full flex items-center justify-between px-4 py-[17px] pb-4 bg-white"
       >
-        <div className="flex items-center gap-2.5 text-sm font-semibold text-gray-800">
+        <div className="flex items-center gap-3 text-[14px] font-bold text-[#111827]">
           <TagIcon />
           Apply Coupon
         </div>
@@ -84,19 +86,19 @@ const CouponSection = ({ onCouponApply }) => {
 
       {/* Expandable body */}
       {open && (
-        <div className="px-4 pb-4 bg-white flex flex-col gap-3 border-t border-gray-100">
+        <div className="px-4 pb-4 bg-white flex flex-col gap-4 border-t border-[#E5E7EB]">
           {/* Coupon input row */}
-          <div className="flex items-center gap-2 mt-3">
+          <div className="flex items-center gap-2 mt-4">
             <input
               type="text"
               placeholder="Enter coupon code"
               value={inputCode}
               onChange={(e) => setInputCode(e.target.value)}
-              className="flex-1 border border-gray-200 rounded-xl px-4 py-2.5 text-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="flex-1 border border-[#E5E7EB] rounded-[4px] px-4 py-2.5 text-sm placeholder:text-[#6B7280] focus:outline-none focus:border-[#3171FF] focus:ring-1 focus:ring-[#3171FF]"
             />
             <button
               onClick={handleApply}
-              className="border border-gray-300 text-blue-600 text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-blue-50 transition-colors flex-shrink-0"
+              className="border border-[#E5E7EB] text-[#1977F2] text-[14px] font-bold px-3 py-1.5 rounded-[4px] hover:bg-blue-50 transition-colors flex-shrink-0"
             >
               Apply
             </button>

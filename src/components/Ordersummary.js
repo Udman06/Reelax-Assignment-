@@ -7,7 +7,7 @@ import WalletBalance from "./Walletbalance";
 
 const OrderSummary = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-[15px]">
       {/* Top card: plan info + upgrade */}
       <PlanCard
         price={4999}
@@ -18,7 +18,7 @@ const OrderSummary = () => {
       />
 
       {/* Bottom card: wallet, coupon, pricing */}
-      <div className="bg-white rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+      <div className="bg-white rounded-[10px] px-[32px] pt-[26px] pb-[35px] flex flex-col gap-3 border border-[#E5E7EB]">
         <WalletBalance
           balance="500.00"
           onApply={() => console.log("Wallet applied")}

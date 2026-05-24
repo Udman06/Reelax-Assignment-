@@ -24,20 +24,29 @@ const PriceSummary = ({
     "₹" + n.toLocaleString("en-IN", { minimumFractionDigits: 2 });
 
   return (
-    <div className="flex flex-col gap-3">
-      {/* Subtotal & tax rows */}
-      <SummaryRow label="Subtotal" value={fmt(subtotal)} muted />
-      <SummaryRow label={`Tax (${taxRate}% GST)`} value={fmt(tax)} muted />
+    <div className="flex flex-col gap-4 pt-2">
+      <SummaryRow
+        label="Subtotal"
+        value={fmt(subtotal)}
+        muted
+        className="text-[#6B7280] text-[14px] font-medium"
+      />
+      <SummaryRow
+        label={`Tax (${taxRate}% GST)`}
+        value={fmt(tax)}
+        muted
+        className="text-[#6B7280] text-[14px] font-medium"
+      />
 
       {/* Divider */}
-      <hr className="border-gray-200" />
+      <hr className="border-[#E5E7EB]" />
 
       {/* Total */}
       <div className="flex justify-between items-center">
-        <span className="text-base font-bold text-gray-900">
+        <span className="text-[18px] font-bold text-[#111827]">
           Total due today
         </span>
-        <span className="text-2xl font-bold text-blue-600">
+        <span className="text-[#1977F2] font-extrabold text-[24px]">
           {total.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
         </span>
       </div>
@@ -45,7 +54,7 @@ const PriceSummary = ({
       {/* CTA */}
       <button
         onClick={onProceed}
-        className="w-full bg-blue-600 text-white rounded-xl py-3.5 text-sm font-semibold hover:bg-blue-700 transition-colors mt-1"
+        className="w-full bg-blue-600 text-white rounded-[4px] py-[7.5px] text-[16px] font-semibold hover:bg-blue-700 transition-colors mt-1"
       >
         Proceed to Payment
       </button>

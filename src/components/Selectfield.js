@@ -1,13 +1,18 @@
-"use cleint";
-const SelectField = ({ label, options = [], value, onChange }) => {
+"use client";
+
+const SelectField = ({ label, options = [], value, onChange, error }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-1">
       <label className="text-base text-gray-700">{label}</label>
       <div className="relative">
         <select
           value={value}
           onChange={onChange}
-          className="w-full border border-gray-200 rounded-lg px-4 py-3 text-base text-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 appearance-none bg-white pr-10"
+          className={`w-full border rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-1 appearance-none bg-white pr-10 transition-colors ${
+            error
+              ? "border-red-400 focus:border-red-400 focus:ring-red-200 text-gray-400"
+              : "border-gray-200 focus:border-blue-500 focus:ring-blue-500 text-gray-400"
+          }`}
         >
           {options.map((opt) => (
             <option key={opt.value} value={opt.value}>

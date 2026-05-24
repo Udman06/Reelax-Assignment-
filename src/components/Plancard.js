@@ -8,7 +8,7 @@ const PlanCard = ({
   onUpgrade,
 }) => {
   return (
-    <div className="bg-white border-[#E5E7EB] rounded-[10px] p-8 pb-0 pb-[22px]">
+    <div className="bg-white border-[#E5E7EB] rounded-[10px] p-8 pb-0 pb-[22px] h-[271px]">
       <h1 className="text-[#111827] text-[24px] font-bold mb-4">
         Order Summary
       </h1>

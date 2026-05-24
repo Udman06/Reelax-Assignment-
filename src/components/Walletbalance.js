@@ -17,17 +17,19 @@ const WalletIcon = () => (
 
 const WalletBalance = ({ balance = "500.00", onApply }) => {
   return (
-    <div className="border border-gray-200 rounded-xl px-4 py-3 flex items-center justify-between">
+    <div className="border border-[#E5E7EB] rounded-[4px] p-4 flex items-center justify-between">
       <div className="flex items-center gap-3">
         <WalletIcon />
         <div>
-          <p className="text-sm font-bold text-gray-900">Wallet Balance</p>
-          <p className="text-xs text-gray-500">₹{balance} available</p>
+          <p className="text-[14px] font-bold text-[#111827]">Wallet Balance</p>
+          <p className="text-[12px] font-medium text-[#6B7280]">
+            ₹{balance} available
+          </p>
         </div>
       </div>
       <button
         onClick={onApply}
-        className="border border-gray-300 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+        className="border border-[#3171FF33] text-[#1977F2] text-[14px] font-bold px-3 py-1.5 rounded-[4px] hover:bg-blue-50 transition-colors"
       >
         Apply
       </button>
