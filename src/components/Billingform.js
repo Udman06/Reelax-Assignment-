@@ -205,7 +205,7 @@ const BillingForm = ({ onCancel, onSave }) => {
         </div>
 
         {/* Divider */}
-        <hr className="border-gray-200 mt-[42px] mb-6" />
+        <hr className="border-[#E5E7EB] mt-[42px] mb-6" />
 
         {/* Action buttons */}
         <div className="flex justify-end gap-3 pb-[48px]">
